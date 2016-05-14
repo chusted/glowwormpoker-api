@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var cors = require('cors');
 
+var io = require('socket.io').listen(app.listen(port));
+
 var mongoose = require('mongoose');
 mongoose.connect(config.mongo.url);
 
@@ -35,10 +37,17 @@ app.use(bodyParser.urlencoded({
 var jira = require('jira')();
 app.use('/api/latest/jira/', jira.router);
 
+var messages = require('message')(app, io);
+// app.use('/api/latest/message', message);
+
+app.get('/', function(req, res) {
+  res.json({'message': 'Don\'t look here...'});
+});
+
 /**
  * Error Middleware must be declared last
  */
 require('error')(app);
 
-app.listen(port);
+// app.listen(port);
 console.log('INFO: Listening on port %j', port);

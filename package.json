@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "async": "1.5.2",
+    "baconjs": "^0.7.84",
     "body-parser": "1.15.0",
     "bunyan": "1.7.1",
     "bunyan-middleware": "0.3.1",
@@ -36,6 +37,7 @@
     "q": "2.0.2",
     "request": "2.69.0",
     "shelljs": "0.6.0",
+    "socket.io": "^1.4.6",
     "then-redis": "2.0.0",
     "validator": "^5.2.0"
   },
