@@ -7,9 +7,12 @@ Heroku Url: https://glowwormpoker-api.herokuapp.com/
 API DOCS
 
 This will add a jira to the MongoDB
+
 POST: /api/latest/jira/jiras
 
 SAMPLE REQUEST JSON:
+
+```javascript
 {
     "jira": {
         "name": "Create Landing Page",
@@ -17,11 +20,15 @@ SAMPLE REQUEST JSON:
         "createdBy": "Best Coder"
     }
 }
+```
 
 This will bring back the full list of stories from the MongoDB
+
 GET: /api/lastest/jira/jiras
 
 SAMPLE RESPONSE JSON
+
+```javascript
 [
   {
     "_id": "57367d00331af565b87fe675",
@@ -38,3 +45,4 @@ SAMPLE RESPONSE JSON
     "__v": 0
   }
 ]
+```
