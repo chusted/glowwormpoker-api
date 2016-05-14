@@ -1,0 +1,10 @@
+{
+    "name": "Glowworm Poker API",
+    "description": "A barebones Node.js app using Express 4",
+    "repository": "https://github.com/chusted/glowwormpoker-api.git",
+    "keywords": [
+        "node",
+        "express",
+        "static"
+    ]
+}
